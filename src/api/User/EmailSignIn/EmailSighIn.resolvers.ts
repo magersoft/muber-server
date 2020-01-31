@@ -1,0 +1,45 @@
+import User from '../../../entities/User';
+import { Resolvers } from '../../../types/resolvers';
+import { EmailSignInMutationArgs, EmailSignInResponse } from '../../../types/graph';
+
+const resolvers: Resolvers = {
+  Mutation: {
+    EmailSignIn: async (_, args: EmailSignInMutationArgs): Promise<EmailSignInResponse> => {
+      const { email, password } = args;
+
+      try {
+        const user = await User.findOne({ email });
+        if (!user) {
+          return {
+            ok: false,
+            error: 'No user found with that email',
+            token: null
+          }
+        }
+
+        const checkPassword = await user.comparePassword(password);
+        if (checkPassword) {
+          return {
+            ok: true,
+            error: null,
+            token: 'Coming soon'
+          }
+        } else {
+          return {
+            ok: false,
+            error: 'Wrond password',
+            token: null
+          }
+        }
+      } catch (e) {
+        return {
+          ok: false,
+          error: e.message,
+          token: null
+        }
+      }
+    }
+  }
+};
+
+export default resolvers;

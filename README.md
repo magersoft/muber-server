@@ -7,7 +7,7 @@ Learning and practice on really project
 ### Public resolvers:
 
 - [x] Sign In / Sign Up with Facebook
-- [ ] Sign In with Email
+- [x] Sign In with Email
 - [ ] Start phone number verification
 - [ ] Complete phone number verification
 - [ ] Sign Up with Email
