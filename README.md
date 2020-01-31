@@ -6,7 +6,7 @@ Learning and practice on really project
 
 ### Public resolvers:
 
-- [ ] Sign In / Sign Up with Facebook
+- [x] Sign In / Sign Up with Facebook
 - [ ] Sign In with Email
 - [ ] Start phone number verification
 - [ ] Complete phone number verification
@@ -16,6 +16,8 @@ Learning and practice on really project
 
 ### Private Resolvers:
 
+- [ ] Generate JWT
+- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get my Profile
 - [ ] Update my Profile
