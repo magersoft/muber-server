@@ -8,8 +8,8 @@ Learning and practice on really project
 
 - [x] Sign In / Sign Up with Facebook
 - [x] Sign In with Email
-- [ ] Start phone number verification
-- [ ] Complete phone number verification
+- [x] Start phone number verification
+- [x] Complete phone number verification
 - [ ] Sign Up with Email
 
 ---
