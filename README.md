@@ -22,8 +22,9 @@ Learning and practice on really project
 
 ### Private Resolvers:
 
-- [ ] Verify Email
-- [ ] Get my Profile
+- [x] Get my Profile
+- [x] Request Email Verification
+- [x] Verify Email
 - [ ] Update my Profile
 - [ ] Toggle Driving Mode
 - [ ] Report Location / Orientation
