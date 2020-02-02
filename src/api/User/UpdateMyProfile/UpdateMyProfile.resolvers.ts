@@ -16,6 +16,10 @@ const resolvers: Resolvers = {
       });
 
       try {
+        if (args.password !== null) {
+          user.password = args.password;
+          user.save();
+        }
         await User.update({ id: user.id }, { ...notNull });
         return {
           ok: true,

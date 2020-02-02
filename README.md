@@ -25,8 +25,8 @@ Learning and practice on really project
 - [x] Get my Profile
 - [x] Request Email Verification
 - [x] Verify Email
-- [ ] Update my Profile
-- [ ] Toggle Driving Mode
+- [x] Update my Profile
+- [x] Toggle Driving Mode
 - [ ] Report Location / Orientation
 - [ ] Add Place
 - [ ] Edit Place
