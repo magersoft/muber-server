@@ -31,7 +31,7 @@ Learning and practice on really project
 - [x] Add Place
 - [x] Edit Place
 - [x] Delete Place
-- [ ] Get my Place
+- [x] Get my Place
 - [ ] See Nearby Drivers
 - [ ] Subscribe to Nearby Drivers
 - [ ] Request a Ride
