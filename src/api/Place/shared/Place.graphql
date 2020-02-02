@@ -5,7 +5,7 @@ type Place {
   lng: Float
   address: String!
   isFavorite: Boolean!
-  user: User!
+  userId: Int!
   createdAt: String!
   updatedAt: String
 }
