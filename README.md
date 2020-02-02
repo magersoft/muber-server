@@ -27,7 +27,7 @@ Learning and practice on really project
 - [x] Verify Email
 - [x] Update my Profile
 - [x] Toggle Driving Mode
-- [ ] Report Location / Orientation
+- [x] Report Location / Orientation
 - [ ] Add Place
 - [ ] Edit Place
 - [ ] Delete Place
