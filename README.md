@@ -36,7 +36,8 @@ Learning and practice on really project
 - [x] Subscribe to Nearby Drivers
 - [x] Request a Ride
 - [x] Get Nearby Rides
-- [ ] Subscribe to Nearby Ride Request
+- [x] Subscribe to Nearby Ride Request
+- [x] Update Ride Status
 - [ ] Subscribe to Ride Status
 - [ ] Subscribe to Chat Room Messages
 - [ ] Send a Chat Message
