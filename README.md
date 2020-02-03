@@ -32,10 +32,10 @@ Learning and practice on really project
 - [x] Edit Place
 - [x] Delete Place
 - [x] Get my Place
-- [ ] See Nearby Drivers
-- [ ] Subscribe to Nearby Drivers
-- [ ] Request a Ride
-- [ ] Get Nearby Rides
+- [x] See Nearby Drivers
+- [x] Subscribe to Nearby Drivers
+- [x] Request a Ride
+- [x] Get Nearby Rides
 - [ ] Subscribe to Nearby Ride Request
 - [ ] Subscribe to Ride Status
 - [ ] Subscribe to Chat Room Messages
