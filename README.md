@@ -39,7 +39,8 @@ Learning and practice on really project
 - [x] Subscribe to Nearby Ride Request
 - [x] Update Ride Status
 - [x] Subscribe to Ride Status
-- [ ] Create a Chat Room
+- [x] Create a Chat Room
+- [x] Get Chat Room Messages
 - [ ] Subscribe to Chat Room Messages
 - [ ] Send a Chat Message
 
