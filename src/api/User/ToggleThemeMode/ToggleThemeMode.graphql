@@ -1,0 +1,8 @@
+type ToggleThemeModeResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  ToggleThemeMode: ToggleThemeModeResponse!
+}

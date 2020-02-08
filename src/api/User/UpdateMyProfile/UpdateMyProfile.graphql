@@ -9,6 +9,7 @@ type Mutation {
     lastName: String
     email: String
     password: String
+    profilePhoto: String
     age: Int
   ): UpdateMyProfileResponse!
 }

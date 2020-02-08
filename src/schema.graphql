@@ -43,7 +43,8 @@ type Mutation {
   RequestEmailVerification: RequestEmailVerificationResponse!
   StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse
   ToggleDrivingMode: ToggleDrivingModeResponse!
-  UpdateMyProfile(firstName: String, lastName: String, email: String, password: String, age: Int): UpdateMyProfileResponse!
+  ToggleThemeMode: ToggleThemeModeResponse!
+  UpdateMyProfile(firstName: String, lastName: String, email: String, password: String, profilePhoto: String, age: Int): UpdateMyProfileResponse!
 }
 
 type Chat {
@@ -226,6 +227,7 @@ type User {
   lastLat: Float
   lastOrientation: Float
   fbId: String
+  darkTheme: Boolean!
   messages: [Message]
   ridesAsPassenger: [Ride]
   ridesAsDriver: [Ride]
@@ -242,6 +244,11 @@ type StartPhoneVerificationResponse {
 }
 
 type ToggleDrivingModeResponse {
+  ok: Boolean!
+  error: String
+}
+
+type ToggleThemeModeResponse {
   ok: Boolean!
   error: String
 }

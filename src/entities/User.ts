@@ -72,6 +72,9 @@ class User extends BaseEntity {
   @Column({ type: 'text', nullable: true })
   fbId: string;
 
+  @Column({ type: 'boolean', default: false })
+  darkTheme: boolean;
+
   @OneToMany(type => Chat, chat => chat.passenger)
   chatsAsPassenger: Chat[];
 

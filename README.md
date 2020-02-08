@@ -1,4 +1,4 @@
-## (M)Uber clone on TypeScript, NodeJS, GraphQL
+## (M)Uber clone on TypeScript, NodeJS, GraphQL (Server)
 
 Learning and practice on really project
 

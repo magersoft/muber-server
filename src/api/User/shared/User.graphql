@@ -17,6 +17,7 @@ type User {
   lastLat: Float
   lastOrientation: Float
   fbId: String
+  darkTheme: Boolean!
   messages: [Message]
   ridesAsPassenger: [Ride]
   ridesAsDriver: [Ride]
