@@ -43,11 +43,11 @@ class Ride extends BaseEntity {
   @Column({ type: 'double precision', default: 0 })
   price: number;
 
-  @Column({ type: 'text' })
-  duration: string;
+  @Column({ type: 'double precision', default: 0 })
+  duration: number;
 
-  @Column({ type: 'text' })
-  distance: string;
+  @Column({ type: 'double precision', default: 0 })
+  distance: number;
 
   @Column({ nullable: true })
   passengerId: number;
