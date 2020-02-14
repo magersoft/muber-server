@@ -9,7 +9,7 @@ const resolvers: Resolvers = {
     GetRide: privateResolver(async(_, args: GetRideQueryArgs, { req }): Promise<GetRideResponse> => {
       const user: User = req.user;
       try {
-        const ride = await Ride.findOne({ id: args.rideId });
+        const ride = await Ride.findOne({ id: args.rideId }, { relations: ['passenger', 'driver'] });
         if (ride) {
           if (ride.passengerId === user.id || ride.driverId === user.id) {
             return {

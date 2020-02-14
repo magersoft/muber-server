@@ -13,7 +13,7 @@ const resolvers: Resolvers = {
         try {
           let ride: Ride | undefined;
           if (args.status === 'ACCEPTED') {
-            ride = await Ride.findOne({ id: args.rideId, status: 'REQUESTING' }, { relations: ['passenger'] });
+            ride = await Ride.findOne({ id: args.rideId, status: 'REQUESTING' }, { relations: ['passenger', 'driver'] });
             if (ride) {
               ride.driver = user;
               user.isTaken = true;
@@ -28,24 +28,39 @@ const resolvers: Resolvers = {
             ride = await Ride.findOne({
               id: args.rideId,
               driver: user
-            });
+            }, { relations: ['passenger', 'driver'] });
+            if (args.status === 'FINISHED') {
+              if (ride) {
+                const passenger = await User.findOne({ id: ride.passenger.id });
+                if (passenger) {
+                  passenger.isRiding = false;
+                  passenger.save();
+                }
+                const driver = await User.findOne({ id: ride.driver.id });
+                if (driver) {
+                  driver.isTaken = false;
+                  driver.save();
+                }
+              }
+            }
           }
           if (ride) {
             ride.status = args.status;
             ride.save();
             pubSub.publish('rideUpdate', { RideStatusSubscription: ride });
-            return { ok: true, error: null }
+            return { ok: true, error: null, rideId: ride.id }
           } else {
             return {
               ok: false,
-              error: 'Can\'t update ride'
+              error: 'Can\'t update ride',
+              rideId: null
             }
           }
         } catch (e) {
-          return { ok: false, error: e.message }
+          return { ok: false, error: e.message, rideId: null }
         }
       } else {
-        return { ok: false, error: 'You are not driver' }
+        return { ok: false, error: 'You are not driver', rideId: null }
       }
     })
   }
