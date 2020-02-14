@@ -4,7 +4,7 @@ const connectionOptions: ConnectionOptions = {
   type: 'postgres',
   database: 'muber',
   synchronize: true,
-  logging: false,
+  logging: true,
   entities: ['entities/**/*.*'],
   host: process.env.DB_ENDPOINT,
   port: 5432,
