@@ -40,6 +40,7 @@ type Mutation {
   EmailSignUp(firstName: String!, lastName: String!, email: String!, password: String!, profilePhoto: String!, age: Int!, phoneNumber: String!): EmailSignUpResponse!
   FacebookConnect(firstName: String!, lastName: String!, email: String, fbId: String!): FacebookConnectResponse
   ReportMovement(lastOrientation: Float, lastLat: Float!, lastLng: Float!): ReportMovementResponse!
+  RequestEmailExist(email: String!): RequestEmailExistResponse!
   RequestEmailVerification: RequestEmailVerificationResponse!
   StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse
   ToggleDrivingMode: ToggleDrivingModeResponse!
@@ -203,6 +204,12 @@ type GetNearbyDriversResponse {
 type ReportMovementResponse {
   ok: Boolean!
   error: String
+}
+
+type RequestEmailExistResponse {
+  ok: Boolean!
+  error: String
+  exist: Boolean!
 }
 
 type RequestEmailVerificationResponse {

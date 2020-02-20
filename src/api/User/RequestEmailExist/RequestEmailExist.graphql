@@ -1,0 +1,9 @@
+type RequestEmailExistResponse {
+  ok: Boolean!
+  error: String
+  exist: Boolean!
+}
+
+type Mutation {
+  RequestEmailExist(email: String!): RequestEmailExistResponse!
+}

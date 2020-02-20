@@ -101,8 +101,9 @@ class User extends BaseEntity {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  public comparePassword(password: string): Promise<boolean> {
-    return bcrypt.compare(password, this.password);
+  public async comparePassword(password: string): Promise<boolean> {
+    console.log(await bcrypt.compare(password, this.password));
+    return await bcrypt.compare(password, this.password);
   }
 
   @BeforeInsert()
